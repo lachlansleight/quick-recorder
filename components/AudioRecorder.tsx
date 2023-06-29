@@ -63,9 +63,17 @@ const AudioRecorder = ({
             }
 
             try {
-                const devices = await navigator.mediaDevices.enumerateDevices();
-                console.log(devices);
-                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                const inputDevices = (await navigator.mediaDevices.enumerateDevices()).filter(
+                    d => d.kind === "audioinput"
+                );
+                console.log(inputDevices);
+                const stream = await navigator.mediaDevices.getUserMedia({
+                    audio: {
+                        noiseSuppression: false,
+                        autoGainControl: true,
+                        volume: 1,
+                    } as any,
+                });
                 setRecorder(new MediaRecorder(stream));
                 setState("inactive");
                 console.log("Created audio recorder");
