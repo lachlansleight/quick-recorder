@@ -8,9 +8,7 @@ const Layout = ({ children }: { children: ReactNode }): JSX.Element => {
                 <title>An Unnamed Space</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className="min-h-screen">
-                {children}
-            </main>
+            <main className="min-h-screen bg-black text-white">{children}</main>
         </>
     );
 };

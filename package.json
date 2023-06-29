@@ -13,14 +13,20 @@
         "test:watch": "jest --watchAll"
     },
     "dependencies": {
+        "audiobuffer-to-wav": "^1.0.0",
         "axios": "latest",
-        "dayjs": "latest",
+        "dayjs": "^1.11.7",
+        "formidable": "^2.1.1",
+        "lamejs": "^1.2.1",
+        "lamejstmp": "^1.0.1",
         "next": "latest",
+        "next-connect": "^1.0.0",
         "react": "latest",
         "react-dom": "latest",
-        "react-icons": "latest"
+        "react-icons": "^4.8.0"
     },
     "devDependencies": {
+        "@types/formidable": "^2.0.6",
         "@types/node": "latest",
         "@types/react": "latest",
         "@typescript-eslint/eslint-plugin": "latest",
